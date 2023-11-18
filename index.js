@@ -12,9 +12,9 @@ function runDice() {
   image1.setAttribute("src", "./images/dice" + randomNumber1 + ".png");
   image2.setAttribute("src", "./images/dice" + randomNumber2 + ".png");
 
-  var player1Wins = "🚩 Player 1 Wins";
-  var player2Wins = "Player 2 Wins 🚩";
-  var draw = "Draw";
+  var player1Wins = "🚩 Ganó jugador 1";
+  var player2Wins = "Ganó jugador 2 🚩";
+  var draw = "Empate";
 
   var heading1 = document.querySelector("h1");
 
