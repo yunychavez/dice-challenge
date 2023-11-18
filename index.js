@@ -12,8 +12,8 @@ function runDice() {
   image1.setAttribute("src", "./images/dice" + randomNumber1 + ".png");
   image2.setAttribute("src", "./images/dice" + randomNumber2 + ".png");
 
-  var player1Wins = "Player 1 Wins";
-  var player2Wins = "Player 2 Wins";
+  var player1Wins = "🚩 Player 1 Wins";
+  var player2Wins = "Player 2 Wins 🚩";
   var draw = "Draw";
 
   var heading1 = document.querySelector("h1");
@@ -27,4 +27,10 @@ function runDice() {
   }
 }
 
-runDice();
+var firstVisit = sessionStorage.getItem("firstVisit");
+
+if (firstVisit !== undefined && firstVisit === "no") {
+  runDice();
+} else {
+  sessionStorage.setItem("firstVisit", "no");
+}
